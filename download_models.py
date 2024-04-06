@@ -42,7 +42,7 @@ def download_file(url, folder_path, file_name=None):
 # Define the folders and their corresponding file URLs with optional file names
 folders_and_files = {
     os.path.join('models'): [
-        ('https://huggingface.co/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k/resolve/main/open_clip_pytorch_model.bin', None),
+        #('https://huggingface.co/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k/resolve/main/open_clip_pytorch_model.bin', None),
         ('https://huggingface.co/ashleykleynhans/SUPIR/resolve/main/SUPIR-v0F.ckpt', 'v0F.ckpt'),
         ('https://huggingface.co/ashleykleynhans/SUPIR/resolve/main/SUPIR-v0Q.ckpt', 'v0Q.ckpt')
     ]
@@ -55,18 +55,18 @@ if __name__ == '__main__':
         for file_url, file_name in files:
             download_file(file_url, folder, file_name)
 
-    llava_model = os.getenv('LLAVA_MODEL', 'liuhaotian/llava-v1.5-7b')
-    llava_clip_model = 'openai/clip-vit-large-patch14-336'
-    sdxl_clip_model = 'openai/clip-vit-large-patch14'
+    #llava_model = os.getenv('LLAVA_MODEL', 'liuhaotian/llava-v1.5-7b')
+    #llava_clip_model = 'openai/clip-vit-large-patch14-336'
+    #sdxl_clip_model = 'openai/clip-vit-large-patch14'
 
-    print(f'Downloading LLaVA model: {llava_model}')
-    model_folder = llava_model.split('/')[1]
-    snapshot_download(llava_model, local_dir=os.path.join("models", model_folder), local_dir_use_symlinks=False)
+    #print(f'Downloading LLaVA model: {llava_model}')
+    #model_folder = llava_model.split('/')[1]
+    #snapshot_download(llava_model, local_dir=os.path.join("models", model_folder), local_dir_use_symlinks=False)
 
-    print(f'Downloading LLaVA CLIP model: {llava_clip_model}')
-    model_folder = llava_clip_model.split('/')[1]
-    snapshot_download(llava_clip_model, local_dir=os.path.join("models", model_folder), local_dir_use_symlinks=False)
+    #print(f'Downloading LLaVA CLIP model: {llava_clip_model}')
+    #model_folder = llava_clip_model.split('/')[1]
+    #snapshot_download(llava_clip_model, local_dir=os.path.join("models", model_folder), local_dir_use_symlinks=False)
 
-    print(f'Downloading SDXL CLIP model: {sdxl_clip_model}')
-    model_folder = sdxl_clip_model.split('/')[1]
-    snapshot_download(sdxl_clip_model, local_dir=os.path.join("models", model_folder), local_dir_use_symlinks=False)
+    #print(f'Downloading SDXL CLIP model: {sdxl_clip_model}')
+    #model_folder = sdxl_clip_model.split('/')[1]
+    #snapshot_download(sdxl_clip_model, local_dir=os.path.join("models", model_folder), local_dir_use_symlinks=False)
