@@ -1275,10 +1275,10 @@ def load_and_reset(param_setting):
          'subtle detailing in hair and eye intricacies, clear facial features without distortion, refined but not overdone, maintaining true character and expression, ' \
          'Cinematic, High Contrast, highly detailed, taken using a Canon EOS R camera, hyper detailed photo - ' \
          'realistic maximum detail, 32k, Color Grading, ultra HD, extreme meticulous detailing, skin pore ' \
-         'detailing, hyper sharpness, perfect without deformations.'
+         'detailing, hyper sharpness, perfect without deformations'
     np = 'over-processed, artificial, exaggerated features, wrinkles, unnatural skin smoothing, cartoonish, synthetic, oversaturated colors, ' \
          'painting, oil painting, illustration, drawing, art, sketch, oil painting, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, ' \
-         'messy, worst quality, low quality, artifacts, deformed, low-res, over-smooth
+         'messy, worst quality, low quality, artifacts, deformed, low-res, over-smooth'
     cfix_type = 'Wavelet'
     l_s_stage2 = False  # Linear Stage2 Guidance checkbox
     l_s_s_stage2 = 0
