@@ -1278,7 +1278,7 @@ def load_and_reset(param_setting):
          'detailing, hyper sharpness, perfect without deformations.'
     np = 'over-processed, artificial, exaggerated features, wrinkles, unnatural skin smoothing, cartoonish, synthetic, oversaturated colors, ' \
          'painting, oil painting, illustration, drawing, art, sketch, oil painting, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, ' \
-         'messy, worst quality, low quality, artifacts, deformed, low-res, over-smooth ' \
+         'messy, worst quality, low quality, artifacts, deformed, low-res, over-smooth
     cfix_type = 'Wavelet'
     l_s_stage2 = False  # Linear Stage2 Guidance checkbox
     l_s_s_stage2 = 0
