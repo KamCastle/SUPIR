@@ -133,7 +133,7 @@ else:
 face_helper = None
 model: SUPIRModel = None
 llava_agent = None
-models_loaded = False
+models_loaded = True
 unique_counter = 0
 status_container = StatusContainer()
 
@@ -427,11 +427,11 @@ def update_model_settings(model_type, param_setting):
     """
     # Default settings for a "lightning" SDXL model
     lightning_settings = {
-        's_cfg_Quality': 2.0,
-        'spt_linear_CFG_Quality': 2.0,
-        's_cfg_Fidelity': 1.5,
+        's_cfg_Quality': 4.0,
+        'spt_linear_CFG_Quality': 4.0,
+        's_cfg_Fidelity': 4.0,
         'spt_linear_CFG_Fidelity': 1.5,
-        'edm_steps': 10
+        'edm_steps': 15
     }
 
     # Default settings for a normal SDXL model
@@ -1271,11 +1271,12 @@ def load_and_reset(param_setting):
     sstage1 = -1.0  # Stage1 Guidance Strength
     schurn = 5  # S Churn default 5
     snoise = 1.003  # S Noise defualt 1.003
-    ap = 'Natural, balanced enhancement, preserving authentic skin textures, natural lighting and shadow fidelity, faithful color representation, ' \
+    ap = 'Photo of a man with beard scruff, high quality, natural skin texture, subsurface scattering, skin pore detailing, highly detailed and hyper realistic, sharp focus, ' \
+         'Natural, balanced enhancement, preserving authentic skin textures, natural soft lighting and shadow fidelity, faithful color representation, ' \
          'subtle detailing in hair and eye intricacies, clear facial features without distortion, refined but not overdone, maintaining true character and expression, ' \
-         'Cinematic, High Contrast, highly detailed, taken using a Canon EOS R camera, hyper detailed photo - ' \
-         'realistic maximum detail, 32k, Color Grading, ultra HD, extreme meticulous detailing, skin pore ' \
-         'detailing, hyper sharpness, perfect without deformations'
+         'Cinematic, High Contrast, highly detailed, taken using a Canon EOS R camera, hyper detailed photo, ' \
+         'realistic maximum detail, 32k, Color Grading, ultra HD, extreme meticulous detailing, ' \
+         'hyper sharpness, perfect without deformations'
     np = 'over-processed, artificial, exaggerated features, wrinkles, unnatural skin smoothing, cartoonish, synthetic, oversaturated colors, ' \
          'painting, oil painting, illustration, drawing, art, sketch, oil painting, cartoon, CG Style, 3D render, unreal engine, blurring, dirty, ' \
          'messy, worst quality, low quality, artifacts, deformed, low-res, over-smooth'
